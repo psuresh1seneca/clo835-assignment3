@@ -23,8 +23,8 @@ spec:
         image: mongo:4.2
         volumeMounts:
         - mountPath: /data/db
-          name: mongo-data
+          name: mongo-pvc
       volumes:
-        - name: mongo-data
+        - name: mongo-pvc
           persistentVolumeClaim:
             claimName: mongo-pvc
