@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongo-hp-pv
+  name: mongo-pv-local
+  labels:
+    type: local
 spec:
-  capacity: 
+  capacity:
     storage: 4Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /tmp/mongodb
-  storageClassName: localstorage
